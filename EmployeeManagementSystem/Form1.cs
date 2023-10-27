@@ -52,6 +52,12 @@ namespace EmployeeManagementSystem
 
                 }
 
+                else
+                {
+
+                    MessageBox.Show("Wrong Username and Password ");
+                }
+
             }
 
             catch (Exception ex)
