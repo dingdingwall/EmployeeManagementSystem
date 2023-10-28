@@ -3,22 +3,42 @@ using System;
 using System.Text;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-
-
+using System.Runtime.InteropServices;
+using System.Reflection.Metadata;
 
 namespace EmployeeManagementSystem
 {
     public partial class Login : Form
     {
+
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
+
+
+
+
         public Login()
         {
             InitializeComponent();
+
+
+            login_btn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, login_btn.Width, login_btn.Height, 30, 30));
+
+
+            clear_btn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, clear_btn.Width, clear_btn.Height, 30, 30));
         }
+
+
+
 
 
 
         private void login_btn_Click(object sender, EventArgs e)
         {
+
+
+
             string connectionString = " Data Source=DESKTOP-DCPNVH9\\SQLEXPRESS;Initial Catalog=MyDataBase;Integrated Security=True";
 
             SqlConnection conn = new SqlConnection(connectionString);
@@ -27,6 +47,14 @@ namespace EmployeeManagementSystem
 
             username = UserTxtbox.Text;
             password = PasswordTxtBox.Text;
+
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+
+                MessageBox.Show("Username and Password required");
+                return;
+            }
 
 
 
@@ -95,6 +123,8 @@ namespace EmployeeManagementSystem
 
         }
 
+
+
         private void Login_Load(object sender, EventArgs e)
         {
 
@@ -111,6 +141,19 @@ namespace EmployeeManagementSystem
         private void exitbutton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void PasswordTxtBox_TextChanged(object sender, EventArgs e)
+
+        {
+
+
+
         }
     }
 }
