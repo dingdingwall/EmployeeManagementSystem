@@ -24,12 +24,12 @@ namespace EmployeeManagementSystem
 
         private void label7_Click(object sender, EventArgs e)
         {
-              Login login = new Login();
-             login.Show();
+            Login login = new Login();
+            login.Show();
 
             this.Hide();
-               
-            
+
+
         }
     }
 }

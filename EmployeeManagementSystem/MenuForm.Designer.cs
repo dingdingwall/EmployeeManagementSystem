@@ -78,6 +78,7 @@
             // 
             // textBox4
             // 
+            textBox4.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox4.Location = new Point(626, 158);
             textBox4.Multiline = true;
             textBox4.Name = "textBox4";
@@ -86,6 +87,7 @@
             // 
             // textBox3
             // 
+            textBox3.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox3.Location = new Point(626, 69);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
@@ -114,6 +116,7 @@
             // 
             // textBox2
             // 
+            textBox2.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.Location = new Point(182, 153);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
@@ -132,6 +135,7 @@
             // 
             // textBox1
             // 
+            textBox1.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.Location = new Point(182, 69);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
@@ -168,9 +172,9 @@
             label5.ForeColor = Color.White;
             label5.Location = new Point(112, 366);
             label5.Name = "label5";
-            label5.Size = new Size(115, 23);
+            label5.Size = new Size(72, 23);
             label5.TabIndex = 4;
-            label5.Text = "Employee Id";
+            label5.Text = "Gender";
             // 
             // radioButton2
             // 
