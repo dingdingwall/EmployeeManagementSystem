@@ -35,6 +35,8 @@
             login_btn = new Button();
             PasswordTxtBox = new TextBox();
             button1 = new Button();
+            progressBar1 = new ProgressBar();
+            exitbutton = new Button();
             SuspendLayout();
             // 
             // label1
@@ -110,6 +112,23 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(0, 593);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(542, 12);
+            progressBar1.TabIndex = 9;
+            // 
+            // exitbutton
+            // 
+            exitbutton.Location = new Point(488, 12);
+            exitbutton.Name = "exitbutton";
+            exitbutton.Size = new Size(42, 23);
+            exitbutton.TabIndex = 10;
+            exitbutton.Text = "EXIT";
+            exitbutton.UseVisualStyleBackColor = true;
+            exitbutton.Click += exitbutton_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -117,6 +136,8 @@
             BackColor = Color.FromArgb(62, 3, 149);
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(542, 607);
+            Controls.Add(exitbutton);
+            Controls.Add(progressBar1);
             Controls.Add(button1);
             Controls.Add(PasswordTxtBox);
             Controls.Add(login_btn);
@@ -141,5 +162,7 @@
         private Button login_btn;
         private TextBox PasswordTxtBox;
         private Button button1;
+        private ProgressBar progressBar1;
+        private Button exitbutton;
     }
 }

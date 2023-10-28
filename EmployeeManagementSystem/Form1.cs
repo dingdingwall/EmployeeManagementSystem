@@ -45,9 +45,26 @@ namespace EmployeeManagementSystem
                     username = UserTxtbox.Text;
                     password = PasswordTxtBox.Text;
 
+
+                    for (int i = 0; i <= 100; i++)
+                    {
+                        progressBar1.Value = i;
+                        progressBar1.Update();
+                        System.Threading.Thread.Sleep(20);
+
+
+                    }
+
+
+                    MessageBox.Show("Login Successfully!");
+
                     MenuForm form = new MenuForm();
                     form.Show();
                     this.Hide();
+
+
+
+
 
 
                 }
@@ -60,7 +77,7 @@ namespace EmployeeManagementSystem
 
             }
 
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
@@ -89,6 +106,11 @@ namespace EmployeeManagementSystem
             UserTxtbox.Clear();
             PasswordTxtBox.Clear();
 
+        }
+
+        private void exitbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
