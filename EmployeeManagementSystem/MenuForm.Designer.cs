@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
             label1 = new Label();
             groupBox1 = new GroupBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            salary_txtbox = new TextBox();
+            designation_txtbox = new TextBox();
+            employeeName_txtbox = new TextBox();
             label6 = new Label();
             label4 = new Label();
             label3 = new Label();
-            textBox = new TextBox();
+            employeeId_txtbox = new TextBox();
             label2 = new Label();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
@@ -72,13 +72,13 @@
             // 
             groupBox1.BackColor = Color.Transparent;
             groupBox1.BackgroundImageLayout = ImageLayout.None;
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(salary_txtbox);
+            groupBox1.Controls.Add(designation_txtbox);
+            groupBox1.Controls.Add(employeeName_txtbox);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox);
+            groupBox1.Controls.Add(employeeId_txtbox);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(radioButton1);
             groupBox1.Controls.Add(radioButton2);
@@ -92,35 +92,35 @@
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
             // 
-            // textBox3
+            // salary_txtbox
             // 
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(493, 146);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(132, 23);
-            textBox3.TabIndex = 14;
+            salary_txtbox.BorderStyle = BorderStyle.None;
+            salary_txtbox.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            salary_txtbox.Location = new Point(493, 146);
+            salary_txtbox.Multiline = true;
+            salary_txtbox.Name = "salary_txtbox";
+            salary_txtbox.Size = new Size(132, 23);
+            salary_txtbox.TabIndex = 14;
             // 
-            // textBox2
+            // designation_txtbox
             // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(493, 69);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(132, 23);
-            textBox2.TabIndex = 13;
+            designation_txtbox.BorderStyle = BorderStyle.None;
+            designation_txtbox.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            designation_txtbox.Location = new Point(493, 69);
+            designation_txtbox.Multiline = true;
+            designation_txtbox.Name = "designation_txtbox";
+            designation_txtbox.Size = new Size(132, 23);
+            designation_txtbox.TabIndex = 13;
             // 
-            // textBox1
+            // employeeName_txtbox
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(182, 153);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(132, 23);
-            textBox1.TabIndex = 12;
+            employeeName_txtbox.BorderStyle = BorderStyle.None;
+            employeeName_txtbox.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            employeeName_txtbox.Location = new Point(182, 153);
+            employeeName_txtbox.Multiline = true;
+            employeeName_txtbox.Name = "employeeName_txtbox";
+            employeeName_txtbox.Size = new Size(132, 23);
+            employeeName_txtbox.TabIndex = 12;
             // 
             // label6
             // 
@@ -152,15 +152,15 @@
             label3.TabIndex = 8;
             label3.Text = "Employee Name";
             // 
-            // textBox
+            // employeeId_txtbox
             // 
-            textBox.BorderStyle = BorderStyle.None;
-            textBox.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox.Location = new Point(182, 69);
-            textBox.Multiline = true;
-            textBox.Name = "textBox";
-            textBox.Size = new Size(132, 23);
-            textBox.TabIndex = 2;
+            employeeId_txtbox.BorderStyle = BorderStyle.None;
+            employeeId_txtbox.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            employeeId_txtbox.Location = new Point(182, 69);
+            employeeId_txtbox.Multiline = true;
+            employeeId_txtbox.Name = "employeeId_txtbox";
+            employeeId_txtbox.Size = new Size(132, 23);
+            employeeId_txtbox.TabIndex = 2;
             // 
             // label2
             // 
@@ -229,6 +229,7 @@
             button1.TabIndex = 7;
             button1.Text = "ADD";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -318,6 +319,7 @@
             Controls.Add(groupBox1);
             Controls.Add(label1);
             Name = "MenuForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MenuForm";
             Load += MenuForm_Load;
             groupBox1.ResumeLayout(false);
@@ -333,7 +335,7 @@
 
         private Label label1;
         private GroupBox groupBox1;
-        private TextBox textBox;
+        private TextBox employeeId_txtbox;
         private Label label2;
         private Label label3;
         private Label label6;
@@ -347,10 +349,10 @@
         private Button button3;
         private Button button4;
         private PictureBox pictureBox1;
-        private TextBox textBox1;
+        private TextBox employeeName_txtbox;
         private PictureBox view_picturebox;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox salary_txtbox;
+        private TextBox designation_txtbox;
         private Label label8;
         private PictureBox pictureBox2;
     }

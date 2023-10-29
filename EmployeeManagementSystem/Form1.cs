@@ -52,9 +52,10 @@ namespace EmployeeManagementSystem
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
 
-                MessageBox.Show("Username and Password required");
+                DialogResult dialogResult = MessageBox.Show("Username and Password required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
 
 
 
@@ -84,7 +85,7 @@ namespace EmployeeManagementSystem
                     }
 
 
-                    MessageBox.Show("Login Successfully!");
+                    MessageBox.Show("Login Successfully!", "Sucess!",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
                     MenuForm form = new MenuForm();
                     form.Show();
@@ -100,7 +101,7 @@ namespace EmployeeManagementSystem
                 else
                 {
 
-                    MessageBox.Show("Wrong Username and Password ");
+                    MessageBox.Show("Wrong Username and Password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

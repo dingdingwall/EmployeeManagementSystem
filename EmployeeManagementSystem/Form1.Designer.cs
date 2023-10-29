@@ -172,6 +172,7 @@
             Cursor = Cursors.Hand;
             FormBorderStyle = FormBorderStyle.None;
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             Load += Login_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
