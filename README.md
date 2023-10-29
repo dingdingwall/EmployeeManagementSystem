@@ -1,4 +1,4 @@
-# For my Final Project in DBSYS31
+# For my Final Project in DBSYS31 -- Teacher:Sir Hardy @hn185036
 
 ** Not yet finished. 
 - still working on the login form, after I finish it I will work on the menu form. 
