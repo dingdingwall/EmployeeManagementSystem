@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+            #region Windows Form Designer generated code
 
         /// <summary>
         ///  Required method for Designer support - do not modify
@@ -36,9 +36,9 @@
             login_btn = new Button();
             PasswordTxtBox = new TextBox();
             clear_btn = new Button();
-            progressBar1 = new ProgressBar();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
+            progressBar1 = new ProgressBar();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -124,13 +124,6 @@
             clear_btn.UseVisualStyleBackColor = false;
             clear_btn.Click += button1_Click;
             // 
-            // progressBar1
-            // 
-            progressBar1.Location = new Point(0, 593);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(542, 12);
-            progressBar1.TabIndex = 9;
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
@@ -152,6 +145,16 @@
             pictureBox2.TabIndex = 11;
             pictureBox2.TabStop = false;
             // 
+            // progressBar1
+            // 
+            progressBar1.ForeColor = Color.YellowGreen;
+            progressBar1.Location = new Point(-1, 591);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(544, 13);
+            progressBar1.Style = ProgressBarStyle.Continuous;
+            progressBar1.TabIndex = 12;
+            progressBar1.UseWaitCursor = true;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -159,9 +162,9 @@
             BackColor = Color.FromArgb(62, 3, 149);
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(544, 607);
+            Controls.Add(progressBar1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
-            Controls.Add(progressBar1);
             Controls.Add(clear_btn);
             Controls.Add(PasswordTxtBox);
             Controls.Add(login_btn);
@@ -181,6 +184,9 @@
             PerformLayout();
         }
 
+      
+
+
         #endregion
 
         private Label label1;
@@ -190,8 +196,8 @@
         private Button login_btn;
         private TextBox PasswordTxtBox;
         private Button clear_btn;
-        private ProgressBar progressBar1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private ProgressBar progressBar1;
     }
 }

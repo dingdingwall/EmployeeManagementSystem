@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Reflection.Metadata;
+using System.Drawing;
 
 namespace EmployeeManagementSystem
 {
@@ -77,15 +78,18 @@ namespace EmployeeManagementSystem
 
                     for (int i = 0; i <= 100; i++)
                     {
+
+                   
                         progressBar1.Value = i;
                         progressBar1.Update();
                         System.Threading.Thread.Sleep(20);
 
 
+
                     }
 
 
-                    MessageBox.Show("Login Successfully!", "Sucess!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Login Successfully!", "Sucess!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     MenuForm form = new MenuForm();
                     form.Show();
@@ -100,8 +104,10 @@ namespace EmployeeManagementSystem
 
                 else
                 {
-
+                    
+                    
                     MessageBox.Show("Wrong Username and Password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
                 }
 
             }

@@ -16,5 +16,18 @@ namespace EmployeeManagementSystem
         {
             InitializeComponent();
         }
+
+        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MenuForm menu = new MenuForm();
+            menu.Show();
+            this.Close(); 
+            
+        }
     }
 }

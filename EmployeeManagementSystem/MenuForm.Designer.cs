@@ -39,14 +39,14 @@
             label3 = new Label();
             employeeId_txtbox = new TextBox();
             label2 = new Label();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
+            radiobtn_female = new RadioButton();
+            radiobtn_male = new RadioButton();
             label5 = new Label();
             logout = new Label();
-            button1 = new Button();
+            btn_ADD = new Button();
             button2 = new Button();
             button3 = new Button();
-            button4 = new Button();
+            btn_reset = new Button();
             pictureBox1 = new PictureBox();
             view_picturebox = new PictureBox();
             label8 = new Label();
@@ -80,8 +80,8 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(employeeId_txtbox);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(radioButton1);
-            groupBox1.Controls.Add(radioButton2);
+            groupBox1.Controls.Add(radiobtn_female);
+            groupBox1.Controls.Add(radiobtn_male);
             groupBox1.Controls.Add(label5);
             groupBox1.Font = new Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.ForeColor = SystemColors.ButtonHighlight;
@@ -172,31 +172,31 @@
             label2.TabIndex = 0;
             label2.Text = "Employee Id";
             // 
-            // radioButton1
+            // radiobtn_female
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.ForeColor = SystemColors.ButtonHighlight;
-            radioButton1.Location = new Point(780, 146);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(63, 18);
-            radioButton1.TabIndex = 2;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Female";
-            radioButton1.UseVisualStyleBackColor = true;
+            radiobtn_female.AutoSize = true;
+            radiobtn_female.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            radiobtn_female.ForeColor = SystemColors.ButtonHighlight;
+            radiobtn_female.Location = new Point(780, 146);
+            radiobtn_female.Name = "radiobtn_female";
+            radiobtn_female.Size = new Size(63, 18);
+            radiobtn_female.TabIndex = 2;
+            radiobtn_female.TabStop = true;
+            radiobtn_female.Text = "Female";
+            radiobtn_female.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radiobtn_male
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton2.ForeColor = SystemColors.ButtonHighlight;
-            radioButton2.Location = new Point(780, 111);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(49, 18);
-            radioButton2.TabIndex = 5;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Male";
-            radioButton2.UseVisualStyleBackColor = true;
+            radiobtn_male.AutoSize = true;
+            radiobtn_male.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            radiobtn_male.ForeColor = SystemColors.ButtonHighlight;
+            radiobtn_male.Location = new Point(780, 111);
+            radiobtn_male.Name = "radiobtn_male";
+            radiobtn_male.Size = new Size(49, 18);
+            radiobtn_male.TabIndex = 5;
+            radiobtn_male.TabStop = true;
+            radiobtn_male.Text = "Male";
+            radiobtn_male.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -221,42 +221,43 @@
             logout.Text = "Logout";
             logout.Click += label7_Click;
             // 
-            // button1
+            // btn_ADD
             // 
-            button1.Location = new Point(260, 537);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 7;
-            button1.Text = "ADD";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btn_ADD.Location = new Point(238, 529);
+            btn_ADD.Name = "btn_ADD";
+            btn_ADD.Size = new Size(111, 34);
+            btn_ADD.TabIndex = 7;
+            btn_ADD.Text = "ADD";
+            btn_ADD.UseVisualStyleBackColor = true;
+            btn_ADD.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(389, 537);
+            button2.Location = new Point(388, 529);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(111, 34);
             button2.TabIndex = 8;
             button2.Text = "SELECT";
             button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            button3.Location = new Point(537, 537);
+            button3.Location = new Point(536, 529);
             button3.Name = "button3";
-            button3.Size = new Size(75, 23);
+            button3.Size = new Size(111, 34);
             button3.TabIndex = 9;
             button3.Text = "UPDATE";
             button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_reset
             // 
-            button4.Location = new Point(678, 537);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 10;
-            button4.Text = "RESET";
-            button4.UseVisualStyleBackColor = true;
+            btn_reset.Location = new Point(678, 529);
+            btn_reset.Name = "btn_reset";
+            btn_reset.Size = new Size(111, 34);
+            btn_reset.TabIndex = 10;
+            btn_reset.Text = "RESET";
+            btn_reset.UseVisualStyleBackColor = true;
+            btn_reset.Click += btn_reset_Click;
             // 
             // pictureBox1
             // 
@@ -311,10 +312,10 @@
             Controls.Add(label8);
             Controls.Add(view_picturebox);
             Controls.Add(pictureBox1);
-            Controls.Add(button4);
+            Controls.Add(btn_reset);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btn_ADD);
             Controls.Add(logout);
             Controls.Add(groupBox1);
             Controls.Add(label1);
@@ -340,14 +341,14 @@
         private Label label3;
         private Label label6;
         private Label label4;
-        private RadioButton radioButton1;
+        private RadioButton radiobtn_female;
         private Label label5;
-        private RadioButton radioButton2;
+        private RadioButton radiobtn_male;
         private Label logout;
-        private Button button1;
+        private Button btn_ADD;
         private Button button2;
         private Button button3;
-        private Button button4;
+        private Button btn_reset;
         private PictureBox pictureBox1;
         private TextBox employeeName_txtbox;
         private PictureBox view_picturebox;
