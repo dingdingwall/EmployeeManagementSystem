@@ -93,6 +93,14 @@ namespace EmployeeManagementSystem
             employeeId_txtbox.Text = employeeName_txtbox.Text = designation_txtbox.Text = salary_txtbox.Text = "";
             radiobtn_male.Checked = false;
             radiobtn_female.Checked = false;
+            emplyee_combobox.Text = "";
+         
+
+
+        }
+
+        private void label7_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

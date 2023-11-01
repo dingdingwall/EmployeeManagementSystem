@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
             label1 = new Label();
             groupBox1 = new GroupBox();
+            emplyee_combobox = new ComboBox();
+            label7 = new Label();
             salary_txtbox = new TextBox();
             designation_txtbox = new TextBox();
             employeeName_txtbox = new TextBox();
@@ -72,6 +74,8 @@
             // 
             groupBox1.BackColor = Color.Transparent;
             groupBox1.BackgroundImageLayout = ImageLayout.None;
+            groupBox1.Controls.Add(emplyee_combobox);
+            groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(salary_txtbox);
             groupBox1.Controls.Add(designation_txtbox);
             groupBox1.Controls.Add(employeeName_txtbox);
@@ -85,18 +89,38 @@
             groupBox1.Controls.Add(label5);
             groupBox1.Font = new Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.ForeColor = SystemColors.ButtonHighlight;
-            groupBox1.Location = new Point(12, 170);
+            groupBox1.Location = new Point(176, 189);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1023, 243);
+            groupBox1.Size = new Size(704, 243);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // emplyee_combobox
+            // 
+            emplyee_combobox.FormattingEnabled = true;
+            emplyee_combobox.Items.AddRange(new object[] { "Junior Developer", "Senior Developer", "Accountant", "Manager" });
+            emplyee_combobox.Location = new Point(503, 104);
+            emplyee_combobox.Name = "emplyee_combobox";
+            emplyee_combobox.Size = new Size(132, 33);
+            emplyee_combobox.TabIndex = 16;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Tahoma", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(336, 106);
+            label7.Name = "label7";
+            label7.Size = new Size(160, 23);
+            label7.TabIndex = 15;
+            label7.Text = "Employee Position";
+            label7.Click += label7_Click_1;
             // 
             // salary_txtbox
             // 
             salary_txtbox.BorderStyle = BorderStyle.None;
             salary_txtbox.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            salary_txtbox.Location = new Point(493, 146);
+            salary_txtbox.Location = new Point(182, 164);
             salary_txtbox.Multiline = true;
             salary_txtbox.Name = "salary_txtbox";
             salary_txtbox.Size = new Size(132, 23);
@@ -106,7 +130,7 @@
             // 
             designation_txtbox.BorderStyle = BorderStyle.None;
             designation_txtbox.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            designation_txtbox.Location = new Point(493, 69);
+            designation_txtbox.Location = new Point(503, 43);
             designation_txtbox.Multiline = true;
             designation_txtbox.Name = "designation_txtbox";
             designation_txtbox.Size = new Size(132, 23);
@@ -116,7 +140,7 @@
             // 
             employeeName_txtbox.BorderStyle = BorderStyle.None;
             employeeName_txtbox.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            employeeName_txtbox.Location = new Point(182, 153);
+            employeeName_txtbox.Location = new Point(182, 104);
             employeeName_txtbox.Multiline = true;
             employeeName_txtbox.Name = "employeeName_txtbox";
             employeeName_txtbox.Size = new Size(132, 23);
@@ -126,7 +150,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Tahoma", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(425, 146);
+            label6.Location = new Point(96, 164);
             label6.Name = "label6";
             label6.Size = new Size(61, 23);
             label6.TabIndex = 11;
@@ -136,7 +160,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Tahoma", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(379, 69);
+            label4.Location = new Point(388, 43);
             label4.Name = "label4";
             label4.Size = new Size(108, 23);
             label4.TabIndex = 10;
@@ -146,7 +170,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(30, 153);
+            label3.Location = new Point(29, 96);
             label3.Name = "label3";
             label3.Size = new Size(146, 23);
             label3.TabIndex = 8;
@@ -156,7 +180,7 @@
             // 
             employeeId_txtbox.BorderStyle = BorderStyle.None;
             employeeId_txtbox.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            employeeId_txtbox.Location = new Point(182, 69);
+            employeeId_txtbox.Location = new Point(182, 43);
             employeeId_txtbox.Multiline = true;
             employeeId_txtbox.Name = "employeeId_txtbox";
             employeeId_txtbox.Size = new Size(132, 23);
@@ -166,7 +190,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Tahoma", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(43, 69);
+            label2.Location = new Point(42, 43);
             label2.Name = "label2";
             label2.Size = new Size(115, 23);
             label2.TabIndex = 0;
@@ -177,7 +201,7 @@
             radiobtn_female.AutoSize = true;
             radiobtn_female.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
             radiobtn_female.ForeColor = SystemColors.ButtonHighlight;
-            radiobtn_female.Location = new Point(780, 146);
+            radiobtn_female.Location = new Point(524, 203);
             radiobtn_female.Name = "radiobtn_female";
             radiobtn_female.Size = new Size(63, 18);
             radiobtn_female.TabIndex = 2;
@@ -190,7 +214,7 @@
             radiobtn_male.AutoSize = true;
             radiobtn_male.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
             radiobtn_male.ForeColor = SystemColors.ButtonHighlight;
-            radiobtn_male.Location = new Point(780, 111);
+            radiobtn_male.Location = new Point(524, 164);
             radiobtn_male.Name = "radiobtn_male";
             radiobtn_male.Size = new Size(49, 18);
             radiobtn_male.TabIndex = 5;
@@ -203,7 +227,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Tahoma", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(722, 69);
+            label5.Location = new Point(425, 146);
             label5.Name = "label5";
             label5.Size = new Size(72, 23);
             label5.TabIndex = 4;
@@ -356,5 +380,8 @@
         private TextBox designation_txtbox;
         private Label label8;
         private PictureBox pictureBox2;
+        private Label label7;
+        private ComboBox comboBox1;
+        private ComboBox emplyee_combobox;
     }
 }
