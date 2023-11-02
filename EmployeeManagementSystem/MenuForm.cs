@@ -93,7 +93,7 @@ namespace EmployeeManagementSystem
             Employee_id = employeeId_txtbox.Text;
             Employee_name = employeeName_txtbox.Text;
             Designation = designation_txtbox.Text;
-            Employee_pos = employeeId_txtbox.Text;
+            Employee_pos = emplyee_combobox.Text;
             Salary = salary_txtbox.Text;
 
 
