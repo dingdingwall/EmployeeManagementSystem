@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Win32.SafeHandles;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -79,6 +81,63 @@ namespace EmployeeManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string connectionString = " Data Source=DESKTOP-DCPNVH9\\SQLEXPRESS;Initial Catalog=MyDataBase;Integrated Security=True";
+
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+
+            string Employee_id, Employee_name, Designation, Employee_pos;
+            string Salary;
+
+
+            Employee_id = employeeId_txtbox.Text;
+            Employee_name = employeeName_txtbox.Text;
+            Designation = designation_txtbox.Text;
+            Employee_pos = employeeId_txtbox.Text;
+            Salary = salary_txtbox.Text;
+
+
+
+
+
+            try
+            {
+                string query = "INSERT INTO MenuForm (Employee_Id, Employee_Name, Designation, Employee_Position, Salary) " +
+                        "VALUES (@Employee_Id, @Employee_Name, @Designation, @Employee_Position, @Salary)";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Employee_Id", Employee_id);
+                    cmd.Parameters.AddWithValue("@Employee_Name", Employee_name);
+                    cmd.Parameters.AddWithValue("@Designation", Designation);
+                    cmd.Parameters.AddWithValue("@Employee_Position", Employee_pos);
+                    cmd.Parameters.AddWithValue("@Salary", Salary);
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data inserted successfully.");
+                        Reset();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to insert data.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+
+
+
+
+
+
+        
+
 
         }
 
@@ -94,7 +153,7 @@ namespace EmployeeManagementSystem
             radiobtn_male.Checked = false;
             radiobtn_female.Checked = false;
             emplyee_combobox.Text = "";
-         
+
 
 
         }

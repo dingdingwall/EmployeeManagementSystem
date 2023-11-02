@@ -89,9 +89,9 @@
             groupBox1.Controls.Add(label5);
             groupBox1.Font = new Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.ForeColor = SystemColors.ButtonHighlight;
-            groupBox1.Location = new Point(176, 189);
+            groupBox1.Location = new Point(200, 161);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(704, 243);
+            groupBox1.Size = new Size(656, 240);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
@@ -321,7 +321,7 @@
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(437, 41);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(176, 142);
+            pictureBox2.Size = new Size(170, 128);
             pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox2.TabIndex = 15;
             pictureBox2.TabStop = false;
